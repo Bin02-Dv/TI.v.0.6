@@ -59,7 +59,7 @@ footer i{
     text-align: right;
 }
 
-.row, .forgot-password, span, .btn{
+.forgot-password, span, .btn{
     margin-bottom: 10px;
 }
 
@@ -80,15 +80,18 @@ footer i{
 }
 
 .row{
-    border: 1px solid rgb(174, 173, 173);
-    padding: 10px;
+    margin: 20px 0 20px 0;
+    position: relative;
 }
 
 .row input{
     font-size: 20px;
-    border: none;
+    border: 1px solid rgb(229, 229, 229);
     background: transparent;
-    /* width: 93%; */
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .btn button{
@@ -100,6 +103,22 @@ footer i{
     border: none;
 }
 
+.btn button:hover{
+    background-color: rgba(56, 56, 56, 0.642);
+}
+
 .last-section{
     text-align: center;
+}
+
+.row label{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    transition: all 0.3s ease;
+}
+
+.row input:focus + label,
+.row input:not(:placeholder-shown) + label {
+    top: -15px;
 }
