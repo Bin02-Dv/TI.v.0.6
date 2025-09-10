@@ -8,6 +8,10 @@ header{
     display: flex;
     justify-content: space-between;
     box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    width: 100%;
 }
 
 ul{
@@ -25,10 +29,47 @@ ul{
 }
 
 .blur{
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+h2{
+    font-size: 50px;
+    color: white;
+}
+
+.content span{
+    color: black;
+}
+
+.content{
+    position: relative;
+    height: 20vh;
+}
+
+.content input{
+    font-size: 30px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.content label{
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    color: black;
+    transition: all 2s ease;
+}
+
+.content input:focus + label, 
+.content input:not(:placeholder-shown) + label{
+    top: -20px;
+    color: white;
 }
