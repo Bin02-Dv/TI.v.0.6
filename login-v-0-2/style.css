@@ -122,3 +122,19 @@ footer i{
 .row input:not(:placeholder-shown) + label {
     top: -15px;
 }
+
+@media screen and (max-width: 824px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .right, .left{
+        width: 100%;
+    }
+    h2{
+        font-size: 25px;
+    }
+    .left{
+        height: 20vh;
+    }
+}
